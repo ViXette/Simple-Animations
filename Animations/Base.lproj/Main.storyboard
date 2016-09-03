@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_0_delay-0.04s.gif" translatesAutoresizingMaskIntoConstraints="NO" id="HDR-yX-e9U"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukT-FG-SLe">
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6X-Cm-HoX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy0-Pu-p9f">
+                                <state key="normal" title="Fade In"/>
+                                <connections>
+                                    <action selector="fadeInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jif-2L-ewr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zG-U4-0Fj">
+                                <state key="normal" title="Slide In"/>
+                                <connections>
+                                    <action selector="slideInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qns-gL-nYR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-FA-iE5">
+                                <state key="normal" title="Grow"/>
+                                <connections>
+                                    <action selector="growTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctK-OG-sDM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1zG-U4-0Fj" firstAttribute="top" secondItem="ukT-FG-SLe" secondAttribute="bottom" constant="25" id="1oY-Xh-bka"/>
+                            <constraint firstItem="ukT-FG-SLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="350-0X-EzR"/>
+                            <constraint firstItem="5BH-FA-iE5" firstAttribute="leading" secondItem="1zG-U4-0Fj" secondAttribute="trailing" constant="45" id="OAN-aK-W59"/>
+                            <constraint firstItem="ukT-FG-SLe" firstAttribute="top" secondItem="HDR-yX-e9U" secondAttribute="bottom" constant="25" id="QAw-5G-CL6"/>
+                            <constraint firstItem="zy0-Pu-p9f" firstAttribute="baseline" secondItem="1zG-U4-0Fj" secondAttribute="baseline" id="R7u-Y6-sYA"/>
+                            <constraint firstItem="HDR-yX-e9U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gva-fU-QQX"/>
+                            <constraint firstItem="5BH-FA-iE5" firstAttribute="baseline" secondItem="1zG-U4-0Fj" secondAttribute="baseline" id="iHU-Bn-mfC"/>
+                            <constraint firstItem="1zG-U4-0Fj" firstAttribute="leading" secondItem="zy0-Pu-p9f" secondAttribute="trailing" constant="45" id="v1v-9m-ggi"/>
+                            <constraint firstItem="HDR-yX-e9U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vLb-iX-o9G"/>
+                            <constraint firstItem="1zG-U4-0Fj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yIb-kc-8a3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HDR-yX-e9U" secondAttribute="trailing" id="z9C-xo-COM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animateButton_Label" destination="ukT-FG-SLe" id="XZH-Y0-PkO"/>
+                        <outlet property="imageView" destination="HDR-yX-e9U" id="Rex-JO-Ezn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="60.719640179910051"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frame_0_delay-0.04s.gif" width="400" height="225"/>
+    </resources>
+</document>
